@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+rxversion="6.1"
+id="ced51e29-5fca-4917-867d-fff55cb8064a"
+embeddedrepository="False"
+mode="Global">
+	<name>
+		Recording1
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording1"
+	namespace="ranorexDesktopFramework"/>
+	<variables/>
+	<recorditems/>
+	<repository
+	name="ranorexDesktopFrameworkRepository"
+	id="08fcd731-0030-4259-bbeb-ec31ba3b720a"
+	rxversion="6.1"
+	relativepath="ranorexDesktopFrameworkRepository.rxrep">
+		<codegen
+		classname="ranorexDesktopFrameworkRepository"
+		namespace="ranorexDesktopFramework"/>
+		<rootfolder
+		name="_rootdummy_"
+		id="38dfdf3b-adb0-4aab-8721-9ad46ff2975e"/>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Recording1.UserCode.cs
+	</usercodefile>
+	<references/>
+</recordtable>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="ranorexDesktopFrameworkRepository"
+id="08fcd731-0030-4259-bbeb-ec31ba3b720a"
+rxversion="6.1">
+  <codegen
+  classname="ranorexDesktopFrameworkRepository"
+  namespace="ranorexDesktopFramework"/>
+  <rootfolder
+  name="Root"
+  id="38dfdf3b-adb0-4aab-8721-9ad46ff2975e"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>

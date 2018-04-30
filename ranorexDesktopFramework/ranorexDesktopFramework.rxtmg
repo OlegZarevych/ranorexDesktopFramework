@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="6.1">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="ranorexDesktopFramework"
+      id="fbfb3e72-6254-4207-8f7f-29cd702a27aa"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="ranorexDesktopFramework"
+      id="fbfb3e72-6254-4207-8f7f-29cd702a27aa"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>
