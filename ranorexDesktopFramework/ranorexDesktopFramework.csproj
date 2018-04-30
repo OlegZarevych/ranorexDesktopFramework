@@ -67,6 +67,9 @@
     <Compile Include="AssemblyInfo.cs">
       <id>5dab8eea-547f-49fb-8ad1-98cd0bf5a34b</id>
     </Compile>
+    <Compile Include="Const.cs">
+      <id>5d6900e5-500e-42a0-a238-e737745e76ec</id>
+    </Compile>
     <Compile Include="Program.cs">
       <id>90b4a37f-dd86-4024-a2b5-eb2dbfcd50be</id>
     </Compile>
@@ -87,6 +90,12 @@
       <DependentUpon>Recording1.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>07108465-4ba7-4ef4-b9e2-e21d3f8bf061</id>
+    </Compile>
+    <Compile Include="sampleTest.cs">
+      <id>27942a25-17e9-4a13-a71c-a67c63445024</id>
+    </Compile>
+    <Compile Include="Steps\App.cs">
+      <id>76ea374e-ef6e-4604-814e-61c3b5f29c1c</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +128,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <id>739b32c0-8936-464d-b23e-fb927ef3e904</id>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Steps">
+      <id>0e94cb30-4854-4bb1-aa20-d333a1c52ad8</id>
+    </Folder>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets" Condition="Exists('$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets')" />
