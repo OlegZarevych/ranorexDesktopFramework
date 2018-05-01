@@ -2,37 +2,34 @@
  * Created by Ranorex
  * User: Dell
  * Date: 5/1/2018
- * Time: 1:03 AM
+ * Time: 10:00 AM
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Drawing;
 using System.Threading;
+using WinForms = System.Windows.Forms;
 
 using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Testing;
-using WinForms = System.Windows.Forms;
 
-using ranorexDesktopFramework.Steps;
-
-namespace ranorexDesktopFramework
+namespace ranorexDesktopFramework.Steps
 {
     /// <summary>
-    /// Description of sampleTest.
+    /// Description of AppClose.
     /// </summary>
-    [TestModule("EA00A79E-5774-44F1-945D-6F1575AB17D3", ModuleType.UserCode, 1)]
-    public class sampleTest : ITestModule
+    [TestModule("F80F3C7D-D4F8-4369-BC72-3D93BA00CE34", ModuleType.UserCode, 1)]
+    public class AppClose : ITestModule
     {
-    	private App app;
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public sampleTest()
+        public AppClose()
         {
             // Do not delete - a parameterless constructor is required!
         }
@@ -49,10 +46,9 @@ namespace ranorexDesktopFramework
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
             
-            app = new App();
+            Element proc = "/form[@processname='MyAssays.Desktop.Explorer']";
             
-            app.Run();
-            app.WaitForAppStart();
+            Host.Local.KillApplication(proc);
         }
     }
 }

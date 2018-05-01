@@ -18,11 +18,22 @@ namespace ranorexDesktopFramework.Steps
 	/// </summary>
 	public class App
 	{
+		private const string welcomePictureLocator = "/form/picture";
+		private const string appContainerLocator = "/form[@wpfnative='True' and @title='MyAssays Explorer' and @processname='MyAssays.Desktop.Explorer']";
+		
 		public void Run()
 		{
-			Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\Program Files (x86)\\MyAssays\\MyAssays Desktop\\MyAssays.Desktop.Explorer.exe' with arguments '' in normal mode.", new RecordItemIndex(0));
+			Report.Log(ReportLevel.Info, "Application", "Run application in normal mode.", new RecordItemIndex(0));
             Host.Local.RunApplication(Const.APP_EXEC_PATH, "", Const.APP_PATH, false);
-            Delay.Milliseconds(10000);
+		}
+		
+		public void WaitForAppStart()
+		{
+			WpfElement mainContainer = appContainerLocator;
+	
+			while(!mainContainer.Visible)
+			{
+			}
 		}
 	}
 }

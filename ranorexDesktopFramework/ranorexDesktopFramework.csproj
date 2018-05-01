@@ -11,6 +11,7 @@
     <RanorexVersion>6.1</RanorexVersion>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <projectdefaultrepository>c08f5bd8-0e34-41a1-a7dd-e80459693e59</projectdefaultrepository>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -79,23 +80,14 @@
       <RepositoryCode>true</RepositoryCode>
       <id>212cff97-1f47-4371-a5d7-f65ffbd7f7a7</id>
     </Compile>
-    <Compile Include="Recording1.cs">
-      <BoundTo>6d5a98d4-3172-4a9a-95a4-66202cd9241b</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
-      <RecorderCode>true</RecorderCode>
-      <id>3a4cb808-46e1-471a-bdc6-9a0768b8d4c0</id>
-    </Compile>
-    <Compile Include="Recording1.UserCode.cs">
-      <BoundTo>6d5a98d4-3172-4a9a-95a4-66202cd9241b</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
-      <UserCode>true</UserCode>
-      <id>07108465-4ba7-4ef4-b9e2-e21d3f8bf061</id>
-    </Compile>
     <Compile Include="sampleTest.cs">
       <id>27942a25-17e9-4a13-a71c-a67c63445024</id>
     </Compile>
     <Compile Include="Steps\App.cs">
       <id>76ea374e-ef6e-4604-814e-61c3b5f29c1c</id>
+    </Compile>
+    <Compile Include="Steps\AppClose.cs">
+      <id>885a67af-03fa-43ea-a3f0-23a74276d337</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -113,17 +105,8 @@
       <repoid>08fcd731-0030-4259-bbeb-ec31ba3b720a</repoid>
       <reporootid>38dfdf3b-adb0-4aab-8721-9ad46ff2975e</reporootid>
     </None>
-    <None Include="Recording1.rxrec">
-      <BoundTo>c08f5bd8-0e34-41a1-a7dd-e80459693e59</BoundTo>
-      <id>6d5a98d4-3172-4a9a-95a4-66202cd9241b</id>
-      <recordtableid>ced51e29-5fca-4917-867d-fff55cb8064a</recordtableid>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ranorexDesktopFramework.rxtmg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <id>ac5094f5-a41c-47ca-ac08-4a08e1b72aa4</id>
-    </Content>
     <Content Include="ranorexDesktopFramework.rxtst">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <id>739b32c0-8936-464d-b23e-fb927ef3e904</id>
