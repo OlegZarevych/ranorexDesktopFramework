@@ -80,7 +80,10 @@
       <RepositoryCode>true</RepositoryCode>
       <id>212cff97-1f47-4371-a5d7-f65ffbd7f7a7</id>
     </Compile>
-    <Compile Include="sampleTest.cs">
+    <Compile Include="Steps\BaseStep.cs">
+      <id>35a376d2-21b8-42e9-ba5d-5488afef0e03</id>
+    </Compile>
+    <Compile Include="TestNewDefaultSampleTypeExistWithName29.cs">
       <id>27942a25-17e9-4a13-a71c-a67c63445024</id>
     </Compile>
     <Compile Include="Steps\App.cs">
@@ -97,6 +100,9 @@
     </Compile>
     <Compile Include="Steps\NewProtocolWizzard.cs">
       <id>99feff92-89f8-4b73-a4fc-57014631689c</id>
+    </Compile>
+    <Compile Include="Steps\SampleTypesEditor.cs">
+      <id>19681f16-3e63-4368-a72e-1a37b41de4a0</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>

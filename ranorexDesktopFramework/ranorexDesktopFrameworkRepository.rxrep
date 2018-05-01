@@ -24,31 +24,84 @@ rxversion="6.1">
 			id="87ec1ae1-8e8d-4a47-8a63-49e624afea2d"
 			searchtimeout="30000ms"
 			capname="text">
-				/form[@title='MyAssays Explorer']/container/?/?/?/?/?/tabpagelist[@automationid='TabControl']/tabpage[@index='2']/container[@automationid='PART_DockPanel']/text[@caption='Protocols']
+				/form[@processname='MyAssays.Desktop.Explorer']/container/?/?/?/?/?/tabpagelist[@automationid='TabControl']/tabpage[@index='2']/container[@automationid='PART_DockPanel']/text[@caption='Protocols']
 			</item>
 			<item
 			name="HomeNewButton"
 			id="6e881b55-86b2-4a62-b2d8-e13378e45ff9"
 			searchtimeout="30000ms"
 			capname="unknown">
-				/form[@title='MyAssays Explorer']/container//list[@automationid='Ribbon']/list[1]/list[3]/element[@automationid='NewFileRibbonButton']/?/?/element[@automationid='InnerPath']
+				/form[@processname='MyAssays.Desktop.Explorer']/container//list[@automationid='Ribbon']/list[1]/list[3]/element[@automationid='NewFileRibbonButton']/?/?/element[@automationid='InnerPath']
 			</item>
-			<item
-			name="IwillEnterInMyDataRadio"
-			id="b45a6f6e-84d2-40a1-a455-e6c760ba4299"
+			<folder
+			name="NewProtocolWizzard"
+			id="45075ce5-f647-445c-bd95-a9d7d66a9612"
 			searchtimeout="30000ms"
-			capname="radiobutton">
-				/form[@title='MyAssays Explorer']/radiobutton[@text~'^I\ will\ enter/paste\ in\ my\ ']
-			</item>
-			<item
-			name="NextButton"
-			id="265082c5-2723-457a-a95e-bf8389514d05"
-			searchtimeout="30000ms"
-			capname="button">
-				/form[@title='MyAssays Explorer']/button[@text='Next']
-			</item>
+			capname="container"
+			isrooted="True"
+			usecache="False">
+				<item
+				name="NextButton"
+				id="265082c5-2723-457a-a95e-bf8389514d05"
+				searchtimeout="30000ms"
+				capname="button">
+					/form[@processname='MyAssays.Desktop.Explorer']/element/container/container[1]/container/button[@text='Next']
+				</item>
+				<item
+				name="IwillEnterInMyDataRadio"
+				id="b45a6f6e-84d2-40a1-a455-e6c760ba4299"
+				searchtimeout="30000ms"
+				capname="unknown">
+					/form[@processname='MyAssays.Desktop.Explorer']/element/container/element/container/container/container[1]/radiobutton[@text~'^I\ will\ enter/paste\ in\ my\ ']/element[@automationid='optionMark']
+				</item>
+				<item
+				name="ManageTypesButton"
+				id="0d2ddaa8-e3e8-4530-9206-cae24bee0585"
+				searchtimeout="30000ms"
+				capname="button">
+					/form[@processname='MyAssays.Desktop.Explorer']/element/container/element/container/container/container/container/button[@automationid='AdvancedViewButton']
+				</item>
+				<item
+				name="ExpectedNewDefaultTypeByName"
+				id="1f74c442-6894-4344-b703-f5f2cbfcc2e2"
+				searchtimeout="30000ms"
+				capname="text">
+					/form[@processname='MyAssays.Desktop.Explorer']/element/container/element/container/container/container/?/?/list[@automationid='SampleTypesSimplifiedView']/container/?/container[2]/text[@caption='SampleType29']
+				</item>
+				<item
+				name="MaximizeWindowButton"
+				id="7e553be7-111c-4957-9067-c7ffbcd754d6"
+				searchtimeout="30000ms"
+				capname="button">
+					/form[@processname='MyAssays.Desktop.Explorer']/element/container/button[@automationid='Maximize']
+				</item>
+				<basepath>
+					/form[@processname='MyAssays.Desktop.Explorer']/element/container
+				</basepath>
+			</folder>
+			<folder
+			name="SampleTypesEditor"
+			id="1069d048-efe7-44b8-80b3-e717887029cc"
+			searchtimeout="0ms"
+			capname="unknown"
+			isrooted="False">
+				<item
+				name="AddSampleTypeButton"
+				id="e009bb6a-f7ac-41bf-89a3-ed0bc967f514"
+				searchtimeout="30000ms"
+				capname="button">
+					/form[@processname='MyAssays.Desktop.Explorer']/container/?/?/button[@text='Add Sample Type']
+				</item>
+				<item
+				name="SampleTypesEditorOkButton"
+				id="e3bb66ba-5519-4dae-9d9c-e5978df56dce"
+				searchtimeout="30000ms"
+				capname="button">
+					/form[@processname='MyAssays.Desktop.Explorer']/container/?/?/button[@text='OK']
+				</item>
+			</folder>
 			<basepath>
-				/form[@title='MyAssays Explorer']
+				/form[@processname='MyAssays.Desktop.Explorer']
 			</basepath>
 		</appfolder>
 		<basepath/>

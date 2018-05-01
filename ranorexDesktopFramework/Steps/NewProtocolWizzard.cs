@@ -7,21 +7,41 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using Ranorex;
 
 namespace ranorexDesktopFramework.Steps
 {
 	/// <summary>
 	/// Description of NewProtocolWizzard.
 	/// </summary>
-	public static class NewProtocolWizzard
+	public class NewProtocolWizzard : BaseStep
 	{
-		public static ranorexDesktopFrameworkRepository repo = ranorexDesktopFrameworkRepository.Instance;
-    	
-		public static void WillEnterInMyData()
+		public void WillEnterInMyData()
 		{
-			Actions.ClickOnElement(repo.MyAssaysApp.IwillEnterInMyDataRadio);
-			Actions.ClickOnElement(repo.MyAssaysApp.NextButton);
+			Actions.ClickOnElement(repo.MyAssaysApp.NewProtocolWizzard.IwillEnterInMyDataRadio);
+			Actions.ClickOnElement(repo.MyAssaysApp.NewProtocolWizzard.NextButton);
 		}
 		
+		public void NextButton()
+		{
+			Actions.ClickOnElement(repo.MyAssaysApp.NewProtocolWizzard.NextButton);
+		}
+		
+		public SampleTypesEditor OpenManageTypes()
+		{
+			Actions.ClickOnElement(repo.MyAssaysApp.NewProtocolWizzard.ManageTypesButton);
+			return new SampleTypesEditor();
+		}
+		
+		public void MaximizeWindow()
+		{
+			Actions.ClickOnElement(repo.MyAssaysApp.NewProtocolWizzard.MaximizeWindowButton);
+		}
+		
+		public void CheckNewDefaultTypeExist()
+		{
+			Validate.Attribute(repo.MyAssaysApp.NewProtocolWizzard.ExpectedNewDefaultTypeByNameInfo, "Visible", "True");
+			Validate.Attribute(repo.MyAssaysApp.NewProtocolWizzard.ExpectedNewDefaultTypeByNameInfo, "Enabled", "True");
+		}
 	}
 }

@@ -13,15 +13,13 @@ namespace ranorexDesktopFramework.Steps
 	/// <summary>
 	/// Description of Steps.
 	/// </summary>
-	public static class MainWindow
+	public class MainWindow : BaseStep
 	{
-    	public static ranorexDesktopFrameworkRepository repo = ranorexDesktopFrameworkRepository.Instance;
-    	
-    	
-		public static void CreateNewProtocol()
+		public NewProtocolWizzard CreateNewProtocol()
 		{
 			Actions.ClickOnElement(repo.MyAssaysApp.ProtocolsButton);
 			Actions.ClickOnElement(repo.MyAssaysApp.HomeNewButton);
+			return new NewProtocolWizzard();
 		}
 	}
 }

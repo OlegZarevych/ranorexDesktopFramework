@@ -4,7 +4,7 @@ rxversion="6.1">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
 			<testmodule
-			name="sampleTest"
+			name="TestNewDefaultSampleTypeExistWithName29"
 			id="246d2353-b943-40f5-9f4c-632c406445af"
 			ref="ea00a79e-5774-44f1-945d-6f1575ab17d3"
 			type="UserCode"/>
@@ -47,7 +47,7 @@ rxversion="6.1">
 					name="TestCase"
 					id="b40cab34-5e97-44c5-80df-2d6dae3c5047">
 						<testmodule
-						name="sampleTest"
+						name="TestNewDefaultSampleTypeExistWithName29"
 						id="246d2353-b943-40f5-9f4c-632c406445af"/>
 					</testcase>
 					<teardown

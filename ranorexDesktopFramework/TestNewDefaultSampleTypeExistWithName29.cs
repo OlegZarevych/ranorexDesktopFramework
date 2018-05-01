@@ -26,7 +26,7 @@ namespace ranorexDesktopFramework
 	/// Description of sampleTest.
 	/// </summary>
 	[TestModule("EA00A79E-5774-44F1-945D-6F1575AB17D3", ModuleType.UserCode, 1)]
-	public class sampleTest : ITestModule
+	public class TestNewDefaultSampleTypeExistWithName29 : ITestModule
 	{
 		private App app;
 		
@@ -55,7 +55,16 @@ namespace ranorexDesktopFramework
 			app.Run();
 			app.WaitForAppStart();
 			
-			MainWindow.CreateNewProtocol();    
+			MainWindow mainWindow = new MainWindow();
+			
+			NewProtocolWizzard wizzard = mainWindow.CreateNewProtocol();   
+			wizzard.WillEnterInMyData();
+			wizzard.NextButton();
+			wizzard.NextButton();
+			SampleTypesEditor editor = wizzard.OpenManageTypes();
+			editor.AddSampleDefaultType();
+			wizzard.MaximizeWindow();
+			wizzard.CheckNewDefaultTypeExist();
 		}
 	}
 }

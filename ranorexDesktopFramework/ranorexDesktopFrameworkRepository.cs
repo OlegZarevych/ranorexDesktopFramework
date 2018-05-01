@@ -85,21 +85,21 @@ namespace ranorexDesktopFramework
         [RepositoryFolder("fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b")]
         public partial class MyAssaysAppAppFolder : RepoGenBaseFolder
         {
+            ranorexDesktopFrameworkRepositoryFolders.NewProtocolWizzardFolder _newprotocolwizzard;
+            ranorexDesktopFrameworkRepositoryFolders.SampleTypesEditorFolder _sampletypeseditor;
             RepoItemInfo _protocolsbuttonInfo;
             RepoItemInfo _homenewbuttonInfo;
-            RepoItemInfo _iwillenterinmydataradioInfo;
-            RepoItemInfo _nextbuttonInfo;
 
             /// <summary>
             /// Creates a new MyAssaysApp  folder.
             /// </summary>
             public MyAssaysAppAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("MyAssaysApp", "/form[@title='MyAssays Explorer']", parentFolder, 30000, null, true, "fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b", "")
+                    base("MyAssaysApp", "/form[@processname='MyAssays.Desktop.Explorer']", parentFolder, 30000, null, true, "fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b", "")
             {
+                _newprotocolwizzard = new ranorexDesktopFrameworkRepositoryFolders.NewProtocolWizzardFolder(this);
+                _sampletypeseditor = new ranorexDesktopFrameworkRepositoryFolders.SampleTypesEditorFolder(this);
                 _protocolsbuttonInfo = new RepoItemInfo(this, "ProtocolsButton", "container/?/?/?/?/?/tabpagelist[@automationid='TabControl']/tabpage[@index='2']/container[@automationid='PART_DockPanel']/text[@caption='Protocols']", 30000, null, "87ec1ae1-8e8d-4a47-8a63-49e624afea2d");
                 _homenewbuttonInfo = new RepoItemInfo(this, "HomeNewButton", "container//list[@automationid='Ribbon']/list[1]/list[3]/element[@automationid='NewFileRibbonButton']/?/?/element[@automationid='InnerPath']", 30000, null, "6e881b55-86b2-4a62-b2d8-e13378e45ff9");
-                _iwillenterinmydataradioInfo = new RepoItemInfo(this, "IwillEnterInMyDataRadio", "radiobutton[@text~'^I\\ will\\ enter/paste\\ in\\ my\\ ']", 30000, null, "b45a6f6e-84d2-40a1-a455-e6c760ba4299");
-                _nextbuttonInfo = new RepoItemInfo(this, "NextButton", "button[@text='Next']", 30000, null, "265082c5-2723-457a-a95e-bf8389514d05");
             }
 
             /// <summary>
@@ -175,26 +175,70 @@ namespace ranorexDesktopFramework
             }
 
             /// <summary>
-            /// The IwillEnterInMyDataRadio item.
+            /// The NewProtocolWizzard folder.
             /// </summary>
-            [RepositoryItem("b45a6f6e-84d2-40a1-a455-e6c760ba4299")]
-            public virtual Ranorex.RadioButton IwillEnterInMyDataRadio
+            [RepositoryFolder("45075ce5-f647-445c-bd95-a9d7d66a9612")]
+            public virtual ranorexDesktopFrameworkRepositoryFolders.NewProtocolWizzardFolder NewProtocolWizzard
+            {
+                get { return _newprotocolwizzard; }
+            }
+
+            /// <summary>
+            /// The SampleTypesEditor folder.
+            /// </summary>
+            [RepositoryFolder("1069d048-efe7-44b8-80b3-e717887029cc")]
+            public virtual ranorexDesktopFrameworkRepositoryFolders.SampleTypesEditorFolder SampleTypesEditor
+            {
+                get { return _sampletypeseditor; }
+            }
+        }
+
+        /// <summary>
+        /// The NewProtocolWizzardFolder folder.
+        /// </summary>
+        [RepositoryFolder("45075ce5-f647-445c-bd95-a9d7d66a9612")]
+        public partial class NewProtocolWizzardFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _nextbuttonInfo;
+            RepoItemInfo _iwillenterinmydataradioInfo;
+            RepoItemInfo _managetypesbuttonInfo;
+            RepoItemInfo _expectednewdefaulttypebynameInfo;
+            RepoItemInfo _maximizewindowbuttonInfo;
+
+            /// <summary>
+            /// Creates a new NewProtocolWizzard  folder.
+            /// </summary>
+            public NewProtocolWizzardFolder(RepoGenBaseFolder parentFolder) :
+                    base("NewProtocolWizzard", "element/container", parentFolder, 30000, null, false, "45075ce5-f647-445c-bd95-a9d7d66a9612", "")
+            {
+                _nextbuttonInfo = new RepoItemInfo(this, "NextButton", "container[1]/container/button[@text='Next']", 30000, null, "265082c5-2723-457a-a95e-bf8389514d05");
+                _iwillenterinmydataradioInfo = new RepoItemInfo(this, "IwillEnterInMyDataRadio", "element/container/container/container[1]/radiobutton[@text~'^I\\ will\\ enter/paste\\ in\\ my\\ ']/element[@automationid='optionMark']", 30000, null, "b45a6f6e-84d2-40a1-a455-e6c760ba4299");
+                _managetypesbuttonInfo = new RepoItemInfo(this, "ManageTypesButton", "element/container/container/container/container/button[@automationid='AdvancedViewButton']", 30000, null, "0d2ddaa8-e3e8-4530-9206-cae24bee0585");
+                _expectednewdefaulttypebynameInfo = new RepoItemInfo(this, "ExpectedNewDefaultTypeByName", "element/container/container/container/?/?/list[@automationid='SampleTypesSimplifiedView']/container/?/container[2]/text[@caption='SampleType29']", 30000, null, "1f74c442-6894-4344-b703-f5f2cbfcc2e2");
+                _maximizewindowbuttonInfo = new RepoItemInfo(this, "MaximizeWindowButton", "button[@automationid='Maximize']", 30000, null, "7e553be7-111c-4957-9067-c7ffbcd754d6");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("45075ce5-f647-445c-bd95-a9d7d66a9612")]
+            public virtual Ranorex.Container Self
             {
                 get
                 {
-                    return _iwillenterinmydataradioInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
                 }
             }
 
             /// <summary>
-            /// The IwillEnterInMyDataRadio item info.
+            /// The Self item info.
             /// </summary>
-            [RepositoryItemInfo("b45a6f6e-84d2-40a1-a455-e6c760ba4299")]
-            public virtual RepoItemInfo IwillEnterInMyDataRadioInfo
+            [RepositoryItemInfo("45075ce5-f647-445c-bd95-a9d7d66a9612")]
+            public virtual RepoItemInfo SelfInfo
             {
                 get
                 {
-                    return _iwillenterinmydataradioInfo;
+                    return _selfInfo;
                 }
             }
 
@@ -219,6 +263,182 @@ namespace ranorexDesktopFramework
                 get
                 {
                     return _nextbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The IwillEnterInMyDataRadio item.
+            /// </summary>
+            [RepositoryItem("b45a6f6e-84d2-40a1-a455-e6c760ba4299")]
+            public virtual Ranorex.Unknown IwillEnterInMyDataRadio
+            {
+                get
+                {
+                    return _iwillenterinmydataradioInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The IwillEnterInMyDataRadio item info.
+            /// </summary>
+            [RepositoryItemInfo("b45a6f6e-84d2-40a1-a455-e6c760ba4299")]
+            public virtual RepoItemInfo IwillEnterInMyDataRadioInfo
+            {
+                get
+                {
+                    return _iwillenterinmydataradioInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ManageTypesButton item.
+            /// </summary>
+            [RepositoryItem("0d2ddaa8-e3e8-4530-9206-cae24bee0585")]
+            public virtual Ranorex.Button ManageTypesButton
+            {
+                get
+                {
+                    return _managetypesbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ManageTypesButton item info.
+            /// </summary>
+            [RepositoryItemInfo("0d2ddaa8-e3e8-4530-9206-cae24bee0585")]
+            public virtual RepoItemInfo ManageTypesButtonInfo
+            {
+                get
+                {
+                    return _managetypesbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ExpectedNewDefaultTypeByName item.
+            /// </summary>
+            [RepositoryItem("1f74c442-6894-4344-b703-f5f2cbfcc2e2")]
+            public virtual Ranorex.Text ExpectedNewDefaultTypeByName
+            {
+                get
+                {
+                    return _expectednewdefaulttypebynameInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ExpectedNewDefaultTypeByName item info.
+            /// </summary>
+            [RepositoryItemInfo("1f74c442-6894-4344-b703-f5f2cbfcc2e2")]
+            public virtual RepoItemInfo ExpectedNewDefaultTypeByNameInfo
+            {
+                get
+                {
+                    return _expectednewdefaulttypebynameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MaximizeWindowButton item.
+            /// </summary>
+            [RepositoryItem("7e553be7-111c-4957-9067-c7ffbcd754d6")]
+            public virtual Ranorex.Button MaximizeWindowButton
+            {
+                get
+                {
+                    return _maximizewindowbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MaximizeWindowButton item info.
+            /// </summary>
+            [RepositoryItemInfo("7e553be7-111c-4957-9067-c7ffbcd754d6")]
+            public virtual RepoItemInfo MaximizeWindowButtonInfo
+            {
+                get
+                {
+                    return _maximizewindowbuttonInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The SampleTypesEditorFolder folder.
+        /// </summary>
+        [RepositoryFolder("1069d048-efe7-44b8-80b3-e717887029cc")]
+        public partial class SampleTypesEditorFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _addsampletypebuttonInfo;
+            RepoItemInfo _sampletypeseditorokbuttonInfo;
+
+            /// <summary>
+            /// Creates a new SampleTypesEditor  folder.
+            /// </summary>
+            public SampleTypesEditorFolder(RepoGenBaseFolder parentFolder) :
+                    base("SampleTypesEditor", "", parentFolder, 0, null, false, "1069d048-efe7-44b8-80b3-e717887029cc", "")
+            {
+                _addsampletypebuttonInfo = new RepoItemInfo(this, "AddSampleTypeButton", "container/?/?/button[@text='Add Sample Type']", 30000, null, "e009bb6a-f7ac-41bf-89a3-ed0bc967f514");
+                _sampletypeseditorokbuttonInfo = new RepoItemInfo(this, "SampleTypesEditorOkButton", "container/?/?/button[@text='OK']", 30000, null, "e3bb66ba-5519-4dae-9d9c-e5978df56dce");
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("1069d048-efe7-44b8-80b3-e717887029cc")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AddSampleTypeButton item.
+            /// </summary>
+            [RepositoryItem("e009bb6a-f7ac-41bf-89a3-ed0bc967f514")]
+            public virtual Ranorex.Button AddSampleTypeButton
+            {
+                get
+                {
+                    return _addsampletypebuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AddSampleTypeButton item info.
+            /// </summary>
+            [RepositoryItemInfo("e009bb6a-f7ac-41bf-89a3-ed0bc967f514")]
+            public virtual RepoItemInfo AddSampleTypeButtonInfo
+            {
+                get
+                {
+                    return _addsampletypebuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SampleTypesEditorOkButton item.
+            /// </summary>
+            [RepositoryItem("e3bb66ba-5519-4dae-9d9c-e5978df56dce")]
+            public virtual Ranorex.Button SampleTypesEditorOkButton
+            {
+                get
+                {
+                    return _sampletypeseditorokbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SampleTypesEditorOkButton item info.
+            /// </summary>
+            [RepositoryItemInfo("e3bb66ba-5519-4dae-9d9c-e5978df56dce")]
+            public virtual RepoItemInfo SampleTypesEditorOkButtonInfo
+            {
+                get
+                {
+                    return _sampletypeseditorokbuttonInfo;
                 }
             }
         }
