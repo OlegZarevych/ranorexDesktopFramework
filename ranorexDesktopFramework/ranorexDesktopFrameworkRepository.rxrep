@@ -37,7 +37,7 @@ rxversion="6.1">
 			name="NewProtocolWizzard"
 			id="45075ce5-f647-445c-bd95-a9d7d66a9612"
 			searchtimeout="30000ms"
-			capname="container"
+			capname="unknown"
 			isrooted="True"
 			usecache="False">
 				<item
@@ -45,38 +45,38 @@ rxversion="6.1">
 				id="265082c5-2723-457a-a95e-bf8389514d05"
 				searchtimeout="30000ms"
 				capname="button">
-					/form[@processname='MyAssays.Desktop.Explorer']/element/container/container[1]/container/button[@text='Next']
+					/form[@processname='MyAssays.Desktop.Explorer']/?/?/container[1]/container/button[@text='Next']
 				</item>
 				<item
 				name="IwillEnterInMyDataRadio"
 				id="b45a6f6e-84d2-40a1-a455-e6c760ba4299"
 				searchtimeout="30000ms"
 				capname="unknown">
-					/form[@processname='MyAssays.Desktop.Explorer']/element/container/element/container/container/container[1]/radiobutton[@text~'^I\ will\ enter/paste\ in\ my\ ']/element[@automationid='optionMark']
+					/form[@processname='MyAssays.Desktop.Explorer']/?/?/element/container/container/container[1]/radiobutton[@text~'^I\ will\ enter/paste\ in\ my\ ']/element[@automationid='optionMark']
 				</item>
 				<item
 				name="ManageTypesButton"
 				id="0d2ddaa8-e3e8-4530-9206-cae24bee0585"
 				searchtimeout="30000ms"
 				capname="button">
-					/form[@processname='MyAssays.Desktop.Explorer']/element/container/element/container/container/container/container/button[@automationid='AdvancedViewButton']
+					/form[@processname='MyAssays.Desktop.Explorer']/?/?/element/container/container/container/container/button[@automationid='AdvancedViewButton']
 				</item>
 				<item
 				name="ExpectedNewDefaultTypeByName"
 				id="1f74c442-6894-4344-b703-f5f2cbfcc2e2"
 				searchtimeout="30000ms"
 				capname="text">
-					/form[@processname='MyAssays.Desktop.Explorer']/element/container/element/container/container/container/?/?/list[@automationid='SampleTypesSimplifiedView']/container/?/container[2]/text[@caption='SampleType29']
+					/form[@processname='MyAssays.Desktop.Explorer']/?/?/element/container/container/container/?/?/list[@automationid='SampleTypesSimplifiedView']/container/?/container[2]/text[@caption='SampleType29']
 				</item>
 				<item
 				name="MaximizeWindowButton"
 				id="7e553be7-111c-4957-9067-c7ffbcd754d6"
 				searchtimeout="30000ms"
 				capname="button">
-					/form[@processname='MyAssays.Desktop.Explorer']/element/container/button[@automationid='Maximize']
+					/form[@processname='MyAssays.Desktop.Explorer']/?/?/button[@automationid='Maximize']
 				</item>
 				<basepath>
-					/form[@processname='MyAssays.Desktop.Explorer']/element/container
+					/form[@processname='MyAssays.Desktop.Explorer']/?/?
 				</basepath>
 			</folder>
 			<folder

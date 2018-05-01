@@ -209,7 +209,7 @@ namespace ranorexDesktopFramework
             /// Creates a new NewProtocolWizzard  folder.
             /// </summary>
             public NewProtocolWizzardFolder(RepoGenBaseFolder parentFolder) :
-                    base("NewProtocolWizzard", "element/container", parentFolder, 30000, null, false, "45075ce5-f647-445c-bd95-a9d7d66a9612", "")
+                    base("NewProtocolWizzard", "?/?", parentFolder, 30000, null, false, "45075ce5-f647-445c-bd95-a9d7d66a9612", "")
             {
                 _nextbuttonInfo = new RepoItemInfo(this, "NextButton", "container[1]/container/button[@text='Next']", 30000, null, "265082c5-2723-457a-a95e-bf8389514d05");
                 _iwillenterinmydataradioInfo = new RepoItemInfo(this, "IwillEnterInMyDataRadio", "element/container/container/container[1]/radiobutton[@text~'^I\\ will\\ enter/paste\\ in\\ my\\ ']/element[@automationid='optionMark']", 30000, null, "b45a6f6e-84d2-40a1-a455-e6c760ba4299");
@@ -222,11 +222,11 @@ namespace ranorexDesktopFramework
             /// The Self item.
             /// </summary>
             [RepositoryItem("45075ce5-f647-445c-bd95-a9d7d66a9612")]
-            public virtual Ranorex.Container Self
+            public virtual Ranorex.Unknown Self
             {
                 get
                 {
-                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                    return _selfInfo.CreateAdapter<Ranorex.Unknown>(true);
                 }
             }
 

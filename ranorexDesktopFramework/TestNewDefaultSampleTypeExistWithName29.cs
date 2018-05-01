@@ -33,7 +33,7 @@ namespace ranorexDesktopFramework
 		/// <summary>
 		/// Constructs a new instance.
 		/// </summary>
-		public sampleTest()
+		public TestNewDefaultSampleTypeExistWithName29()
 		{
 			// Do not delete - a parameterless constructor is required!
 		}

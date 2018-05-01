@@ -15,6 +15,6 @@ namespace ranorexDesktopFramework.Steps
 	/// </summary>
 	public class BaseStep
 	{
-		private static ranorexDesktopFrameworkRepository repo = ranorexDesktopFrameworkRepository.Instance;
+		protected static ranorexDesktopFrameworkRepository repo = ranorexDesktopFrameworkRepository.Instance;
 	}
 }
