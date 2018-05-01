@@ -1,19 +1,57 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<repository
+﻿<repository
 name="ranorexDesktopFrameworkRepository"
 id="08fcd731-0030-4259-bbeb-ec31ba3b720a"
 rxversion="6.1">
-  <codegen
-  classname="ranorexDesktopFrameworkRepository"
-  namespace="ranorexDesktopFramework"/>
-  <rootfolder
-  name="Root"
-  id="38dfdf3b-adb0-4aab-8721-9ad46ff2975e"
-  searchtimeout="30000ms"
-  capname="unknown"
-  isrooted="True"
-  usecache="True">
-    <basepath/>
-  </rootfolder>
-  <variables/>
+	<codegen
+	classname="ranorexDesktopFrameworkRepository"
+	namespace="ranorexDesktopFramework"/>
+	<rootfolder
+	name="Root"
+	id="38dfdf3b-adb0-4aab-8721-9ad46ff2975e"
+	searchtimeout="0ms"
+	capname="unknown"
+	isrooted="True"
+	usecache="True">
+		<appfolder
+		name="MyAssaysApp"
+		id="fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b"
+		searchtimeout="30000ms"
+		capname="form"
+		isrooted="True"
+		usecache="True">
+			<item
+			name="ProtocolsButton"
+			id="87ec1ae1-8e8d-4a47-8a63-49e624afea2d"
+			searchtimeout="30000ms"
+			capname="text">
+				/form[@title='MyAssays Explorer']/container/?/?/?/?/?/tabpagelist[@automationid='TabControl']/tabpage[@index='2']/container[@automationid='PART_DockPanel']/text[@caption='Protocols']
+			</item>
+			<item
+			name="HomeNewButton"
+			id="6e881b55-86b2-4a62-b2d8-e13378e45ff9"
+			searchtimeout="30000ms"
+			capname="unknown">
+				/form[@title='MyAssays Explorer']/container//list[@automationid='Ribbon']/list[1]/list[3]/element[@automationid='NewFileRibbonButton']/?/?/element[@automationid='InnerPath']
+			</item>
+			<item
+			name="IwillEnterInMyDataRadio"
+			id="b45a6f6e-84d2-40a1-a455-e6c760ba4299"
+			searchtimeout="30000ms"
+			capname="radiobutton">
+				/form[@title='MyAssays Explorer']/radiobutton[@text~'^I\ will\ enter/paste\ in\ my\ ']
+			</item>
+			<item
+			name="NextButton"
+			id="265082c5-2723-457a-a95e-bf8389514d05"
+			searchtimeout="30000ms"
+			capname="button">
+				/form[@title='MyAssays Explorer']/button[@text='Next']
+			</item>
+			<basepath>
+				/form[@title='MyAssays Explorer']
+			</basepath>
+		</appfolder>
+		<basepath/>
+	</rootfolder>
+	<variables/>
 </repository>

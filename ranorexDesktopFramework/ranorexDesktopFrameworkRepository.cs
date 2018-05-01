@@ -27,6 +27,7 @@ namespace ranorexDesktopFramework
     public partial class ranorexDesktopFrameworkRepository : RepoGenBaseFolder
     {
         static ranorexDesktopFrameworkRepository instance = new ranorexDesktopFrameworkRepository();
+        ranorexDesktopFrameworkRepositoryFolders.MyAssaysAppAppFolder _myassaysapp;
 
         /// <summary>
         /// Gets the singleton class instance representing the ranorexDesktopFrameworkRepository element repository.
@@ -43,6 +44,7 @@ namespace ranorexDesktopFramework
         public ranorexDesktopFrameworkRepository() 
             : base("ranorexDesktopFrameworkRepository", "/", null, 0, false, "38dfdf3b-adb0-4aab-8721-9ad46ff2975e", ".\\RepositoryImages\\ranorexDesktopFrameworkRepository38dfdf3b.rximgres")
         {
+            _myassaysapp = new ranorexDesktopFrameworkRepositoryFolders.MyAssaysAppAppFolder(this);
         }
 
 #region Variables
@@ -60,6 +62,15 @@ namespace ranorexDesktopFramework
                 return _selfInfo;
             }
         }
+
+        /// <summary>
+        /// The MyAssaysApp folder.
+        /// </summary>
+        [RepositoryFolder("fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b")]
+        public virtual ranorexDesktopFrameworkRepositoryFolders.MyAssaysAppAppFolder MyAssaysApp
+        {
+            get { return _myassaysapp; }
+        }
     }
 
     /// <summary>
@@ -68,6 +79,150 @@ namespace ranorexDesktopFramework
     [System.CodeDom.Compiler.GeneratedCode("Ranorex", "6.1")]
     public partial class ranorexDesktopFrameworkRepositoryFolders
     {
+        /// <summary>
+        /// The MyAssaysAppAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b")]
+        public partial class MyAssaysAppAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _protocolsbuttonInfo;
+            RepoItemInfo _homenewbuttonInfo;
+            RepoItemInfo _iwillenterinmydataradioInfo;
+            RepoItemInfo _nextbuttonInfo;
+
+            /// <summary>
+            /// Creates a new MyAssaysApp  folder.
+            /// </summary>
+            public MyAssaysAppAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("MyAssaysApp", "/form[@title='MyAssays Explorer']", parentFolder, 30000, null, true, "fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b", "")
+            {
+                _protocolsbuttonInfo = new RepoItemInfo(this, "ProtocolsButton", "container/?/?/?/?/?/tabpagelist[@automationid='TabControl']/tabpage[@index='2']/container[@automationid='PART_DockPanel']/text[@caption='Protocols']", 30000, null, "87ec1ae1-8e8d-4a47-8a63-49e624afea2d");
+                _homenewbuttonInfo = new RepoItemInfo(this, "HomeNewButton", "container//list[@automationid='Ribbon']/list[1]/list[3]/element[@automationid='NewFileRibbonButton']/?/?/element[@automationid='InnerPath']", 30000, null, "6e881b55-86b2-4a62-b2d8-e13378e45ff9");
+                _iwillenterinmydataradioInfo = new RepoItemInfo(this, "IwillEnterInMyDataRadio", "radiobutton[@text~'^I\\ will\\ enter/paste\\ in\\ my\\ ']", 30000, null, "b45a6f6e-84d2-40a1-a455-e6c760ba4299");
+                _nextbuttonInfo = new RepoItemInfo(this, "NextButton", "button[@text='Next']", 30000, null, "265082c5-2723-457a-a95e-bf8389514d05");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("fd0dcffe-2fc0-4b5f-9493-455cf6f84f4b")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ProtocolsButton item.
+            /// </summary>
+            [RepositoryItem("87ec1ae1-8e8d-4a47-8a63-49e624afea2d")]
+            public virtual Ranorex.Text ProtocolsButton
+            {
+                get
+                {
+                    return _protocolsbuttonInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ProtocolsButton item info.
+            /// </summary>
+            [RepositoryItemInfo("87ec1ae1-8e8d-4a47-8a63-49e624afea2d")]
+            public virtual RepoItemInfo ProtocolsButtonInfo
+            {
+                get
+                {
+                    return _protocolsbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The HomeNewButton item.
+            /// </summary>
+            [RepositoryItem("6e881b55-86b2-4a62-b2d8-e13378e45ff9")]
+            public virtual Ranorex.Unknown HomeNewButton
+            {
+                get
+                {
+                    return _homenewbuttonInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The HomeNewButton item info.
+            /// </summary>
+            [RepositoryItemInfo("6e881b55-86b2-4a62-b2d8-e13378e45ff9")]
+            public virtual RepoItemInfo HomeNewButtonInfo
+            {
+                get
+                {
+                    return _homenewbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The IwillEnterInMyDataRadio item.
+            /// </summary>
+            [RepositoryItem("b45a6f6e-84d2-40a1-a455-e6c760ba4299")]
+            public virtual Ranorex.RadioButton IwillEnterInMyDataRadio
+            {
+                get
+                {
+                    return _iwillenterinmydataradioInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The IwillEnterInMyDataRadio item info.
+            /// </summary>
+            [RepositoryItemInfo("b45a6f6e-84d2-40a1-a455-e6c760ba4299")]
+            public virtual RepoItemInfo IwillEnterInMyDataRadioInfo
+            {
+                get
+                {
+                    return _iwillenterinmydataradioInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NextButton item.
+            /// </summary>
+            [RepositoryItem("265082c5-2723-457a-a95e-bf8389514d05")]
+            public virtual Ranorex.Button NextButton
+            {
+                get
+                {
+                    return _nextbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NextButton item info.
+            /// </summary>
+            [RepositoryItemInfo("265082c5-2723-457a-a95e-bf8389514d05")]
+            public virtual RepoItemInfo NextButtonInfo
+            {
+                get
+                {
+                    return _nextbuttonInfo;
+                }
+            }
+        }
+
     }
 #pragma warning restore 0436
 }

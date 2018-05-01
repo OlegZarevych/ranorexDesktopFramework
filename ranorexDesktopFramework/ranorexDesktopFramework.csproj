@@ -89,6 +89,15 @@
     <Compile Include="Steps\AppClose.cs">
       <id>885a67af-03fa-43ea-a3f0-23a74276d337</id>
     </Compile>
+    <Compile Include="Steps\Actions.cs">
+      <id>2e602421-7c52-4885-902f-10ef565c680b</id>
+    </Compile>
+    <Compile Include="Steps\MainWindow.cs">
+      <id>ddace952-ae43-4786-b4a5-ab175d3f0e91</id>
+    </Compile>
+    <Compile Include="Steps\NewProtocolWizzard.cs">
+      <id>99feff92-89f8-4b73-a4fc-57014631689c</id>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

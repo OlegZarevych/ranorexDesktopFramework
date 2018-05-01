@@ -22,37 +22,40 @@ using ranorexDesktopFramework.Steps;
 
 namespace ranorexDesktopFramework
 {
-    /// <summary>
-    /// Description of sampleTest.
-    /// </summary>
-    [TestModule("EA00A79E-5774-44F1-945D-6F1575AB17D3", ModuleType.UserCode, 1)]
-    public class sampleTest : ITestModule
-    {
-    	private App app;
-        /// <summary>
-        /// Constructs a new instance.
-        /// </summary>
-        public sampleTest()
-        {
-            // Do not delete - a parameterless constructor is required!
-        }
+	/// <summary>
+	/// Description of sampleTest.
+	/// </summary>
+	[TestModule("EA00A79E-5774-44F1-945D-6F1575AB17D3", ModuleType.UserCode, 1)]
+	public class sampleTest : ITestModule
+	{
+		private App app;
+		
+		/// <summary>
+		/// Constructs a new instance.
+		/// </summary>
+		public sampleTest()
+		{
+			// Do not delete - a parameterless constructor is required!
+		}
 
-        /// <summary>
-        /// Performs the playback of actions in this module.
-        /// </summary>
-        /// <remarks>You should not call this method directly, instead pass the module
-        /// instance to the <see cref="TestModuleRunner.Run(ITestModule)"/> method
-        /// that will in turn invoke this method.</remarks>
-        void ITestModule.Run()
-        {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
-            Delay.SpeedFactor = 1.0;
-            
-            app = new App();
-            
-            app.Run();
-            app.WaitForAppStart();
-        }
-    }
+		/// <summary>
+		/// Performs the playback of actions in this module.
+		/// </summary>
+		/// <remarks>You should not call this method directly, instead pass the module
+		/// instance to the <see cref="TestModuleRunner.Run(ITestModule)"/> method
+		/// that will in turn invoke this method.</remarks>
+		void ITestModule.Run()
+		{
+			Mouse.DefaultMoveTime = 300;
+			Keyboard.DefaultKeyPressTime = 100;
+			Delay.SpeedFactor = 1.0;
+			
+			app = new App();
+			
+			app.Run();
+			app.WaitForAppStart();
+			
+			MainWindow.CreateNewProtocol();    
+		}
+	}
 }
